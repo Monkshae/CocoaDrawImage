@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +16,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    FirstViewController *fvc = [[FirstViewController alloc]initWithNibName:@"FirstViewController" bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:fvc];
+    self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
